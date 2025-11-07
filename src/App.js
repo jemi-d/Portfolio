@@ -1,11 +1,23 @@
-import './App.css';
-import './styles/Home.css';
-import Home from './components/Home';
+import "./App.css";
+import "./styles/Home.css";
+import Home from "./components/Home";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import TechnicalStack from "./components/TechnicalStack";
+import Projects from "./components/Projects";
+import CaseStudies from "./components/CaseStudies";
+import ContactMe from "./components/ContactMe";
 
 function App() {
   return (
-     <>
+    <>
       <Home />
+      <About />
+      <Skills />
+      <TechnicalStack />
+      <Projects />
+      <CaseStudies />
+      <ContactMe />
     </>
     // <div className="App">
     //   <header className="App-header">

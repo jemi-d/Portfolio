@@ -1,0 +1,69 @@
+.case-studies {
+  padding: 4rem 2rem;
+  background: #020617;
+  color: #f8fafc;
+}
+
+.case-studies h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 2.5rem;
+  color: #22d3ee;
+}
+
+.studies-list {
+  display: grid;
+  gap: 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.study-card {
+  background: rgba(15, 23, 42, 0.92);
+  border-radius: 22px;
+  padding: 2.25rem;
+  border: 1px solid rgba(34, 211, 238, 0.35);
+  box-shadow: 0 35px 90px rgba(8, 47, 73, 0.45);
+}
+
+.study-card header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1.5rem;
+}
+
+.study-card header span {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #67e8f9;
+}
+
+.study-card h3 {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.study-card dl {
+  display: grid;
+  gap: 1.25rem;
+  margin: 0;
+}
+
+.study-card dt {
+  font-weight: 700;
+  color: #bae6fd;
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+}
+
+.study-card dd {
+  margin: 0;
+  line-height: 1.7;
+  color: #e2e8f0;
+}
+

@@ -1,0 +1,32 @@
+.skills {
+  padding: 4rem 2rem;
+  background: #020817;
+  color: #f8fafc;
+}
+
+.skills h2 {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #38bdf8;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.25rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 14px;
+  padding: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(8px);
+  color: #e2e8f0;
+}
+
