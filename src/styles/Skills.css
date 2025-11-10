@@ -21,7 +21,7 @@
 }
 
 .section-title::before {
-  content: '02.';
+  content: '04.';
   color: #64ffda;
   font-family: 'Roboto Mono', monospace;
   font-size: clamp(16px, 3vw, 20px);

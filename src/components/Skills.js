@@ -58,7 +58,7 @@ function Skills() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Where I've Worked
+          Experience
         </motion.h2>
         <div className="experience-content">
           <div className="experience-tabs">

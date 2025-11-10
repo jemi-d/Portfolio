@@ -4,6 +4,8 @@ import "../styles/Home.css";
 
 const navItems = [
   { label: "About", href: "#about" },
+  { label: "Proficiency", href: "#proficiency" },
+  { label: "Education", href: "#education" },
   { label: "Experience", href: "#skills" },
   { label: "Work", href: "#projects" },
   { label: "Contact", href: "#contact" }
@@ -34,12 +36,12 @@ function Home() {
                 <motion.a
                   href={item.href}
                   className="nav-link"
-                  whileHover={{ y: -2 }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <span className="nav-number">0{index + 1}.</span>
                   {item.label}
                 </motion.a>
               </li>

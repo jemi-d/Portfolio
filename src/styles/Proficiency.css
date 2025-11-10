@@ -1,0 +1,182 @@
+.proficiency {
+  padding: 100px 0;
+  background-color: #0a192f;
+}
+
+.proficiency-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.section-title {
+  font-size: clamp(26px, 5vw, 32px);
+  font-weight: 600;
+  color: #ccd6f6;
+  margin-bottom: 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.section-title::before {
+  content: '02.';
+  color: #64ffda;
+  font-family: 'Roboto Mono', monospace;
+  font-size: clamp(16px, 3vw, 20px);
+  font-weight: 400;
+  margin-right: 10px;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 300px;
+  height: 1px;
+  background-color: #233554;
+  margin-left: 20px;
+}
+
+.proficiency-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 800px;
+}
+
+.proficiency-item {
+  width: 100%;
+}
+
+.proficiency-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.proficiency-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ccd6f6;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.proficiency-percentage {
+  font-size: 16px;
+  font-weight: 600;
+  color: #64ffda;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 10px;
+  background-color: #233554;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #64ffda, #22d3ee);
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+  transition: width 1.5s ease-out;
+}
+
+.progress-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .section-title::after {
+    width: 200px;
+  }
+
+  .proficiency-list {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .proficiency {
+    padding: 80px 0;
+  }
+
+  .proficiency-container {
+    padding: 0 20px;
+  }
+
+  .section-title {
+    margin-bottom: 30px;
+  }
+
+  .section-title::after {
+    width: 100px;
+  }
+
+  .proficiency-name {
+    font-size: 16px;
+  }
+
+  .proficiency-percentage {
+    font-size: 14px;
+  }
+
+  .progress-bar-container {
+    height: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .proficiency {
+    padding: 60px 0;
+  }
+
+  .section-title::after {
+    display: none;
+  }
+
+  .proficiency-list {
+    gap: 20px;
+  }
+
+  .proficiency-name {
+    font-size: 14px;
+  }
+
+  .proficiency-percentage {
+    font-size: 12px;
+  }
+
+  .progress-bar-container {
+    height: 6px;
+  }
+}
+

@@ -54,19 +54,21 @@
   font-size: 13px;
   font-family: 'Roboto Mono', monospace;
   color: #ccd6f6;
-  transition: color 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 5px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  position: relative;
+  background: transparent;
+  border: 1px solid transparent;
 }
 
 .nav-link:hover {
   color: #64ffda;
-}
-
-.nav-number {
-  color: #64ffda;
-  margin-right: 5px;
+  background: rgba(100, 255, 218, 0.1);
+  border-color: rgba(100, 255, 218, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(100, 255, 218, 0.2);
 }
 
 .resume-button {
@@ -226,26 +228,40 @@
 }
 
 /* Responsive Design */
+@media (max-width: 968px) {
+  .nav-menu {
+    gap: 10px;
+  }
+
+  .nav-link {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+
+  .resume-button {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar {
     padding: 0 20px;
   }
 
   .nav-menu {
-    gap: 15px;
+    gap: 8px;
+    flex-wrap: wrap;
   }
 
   .nav-link {
-    font-size: 12px;
-  }
-
-  .nav-number {
-    display: none;
+    font-size: 10px;
+    padding: 5px 10px;
   }
 
   .resume-button {
-    padding: 8px 12px;
-    font-size: 12px;
+    padding: 5px 10px;
+    font-size: 10px;
   }
 
   .home {
