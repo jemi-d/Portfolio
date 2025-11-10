@@ -6,39 +6,45 @@ function ContactMe() {
     <motion.section
       id="contact"
       className="contact"
-      initial={{ opacity: 0, y: 60 }}
+      initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
+      transition={{ duration: 0.6 }}
       viewport={{ once: true, amount: 0.3 }}
     >
-      <h2>Contact Me</h2>
-      <p>
-        Have a product idea or need a mobile engineer on your team? I would love
-        to hear from you. Reach out through the form below or connect on any of
-        my channels.
-      </p>
-      <form className="contact-form">
-        <div className="form-row">
-          <label htmlFor="name">Name</label>
-          <input id="name" type="text" placeholder="Jane Doe" />
-        </div>
-        <div className="form-row">
-          <label htmlFor="email">Email</label>
-          <input id="email" type="email" placeholder="jane@example.com" />
-        </div>
-        <div className="form-row">
-          <label htmlFor="message">Message</label>
-          <textarea
-            id="message"
-            rows={5}
-            placeholder="Tell me about your project"
-          />
-        </div>
-        <button type="submit">Send Message</button>
-      </form>
+      <div className="contact-container">
+        <motion.h2
+          className="section-title"
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          Get In Touch
+        </motion.h2>
+        <motion.div
+          className="contact-content"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          <p className="contact-description">
+            Although I'm not currently looking for any new opportunities, my
+            inbox is always open. Whether you have a question or just want to
+            say hi, I'll try my best to get back to you!
+          </p>
+          <motion.a
+            href="mailto:dolly@example.com"
+            className="contact-button"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Say Hello
+          </motion.a>
+        </motion.div>
+      </div>
     </motion.section>
   );
 }
 
 export default ContactMe;
-

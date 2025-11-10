@@ -1,32 +1,213 @@
 .skills {
-  padding: 4rem 2rem;
-  background: #020817;
-  color: #f8fafc;
+  padding: 100px 0;
+  background-color: #0a192f;
 }
 
-.skills h2 {
-  font-size: 2.4rem;
-  text-align: center;
-  margin-bottom: 2rem;
-  color: #38bdf8;
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 1.25rem;
-  max-width: 960px;
+.skills-container {
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 50px;
 }
 
-.skill-card {
-  border: 1px solid rgba(148, 163, 184, 0.25);
-  border-radius: 14px;
-  padding: 1.5rem;
-  text-align: center;
+.section-title {
+  font-size: clamp(26px, 5vw, 32px);
   font-weight: 600;
-  background: rgba(15, 23, 42, 0.75);
-  backdrop-filter: blur(8px);
-  color: #e2e8f0;
+  color: #ccd6f6;
+  margin-bottom: 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
 }
 
+.section-title::before {
+  content: '02.';
+  color: #64ffda;
+  font-family: 'Roboto Mono', monospace;
+  font-size: clamp(16px, 3vw, 20px);
+  font-weight: 400;
+  margin-right: 10px;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 300px;
+  height: 1px;
+  background-color: #233554;
+  margin-left: 20px;
+}
+
+.experience-content {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.experience-tabs {
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid #233554;
+}
+
+.tab-button {
+  background: transparent;
+  border: none;
+  border-left: 2px solid transparent;
+  padding: 12px 20px;
+  text-align: left;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 13px;
+  color: #8892b0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: -2px;
+}
+
+.tab-button:hover {
+  background-color: rgba(100, 255, 218, 0.1);
+  color: #64ffda;
+}
+
+.tab-button.active {
+  border-left-color: #64ffda;
+  color: #64ffda;
+  background-color: rgba(100, 255, 218, 0.1);
+}
+
+.experience-details {
+  min-height: 300px;
+}
+
+.experience-role {
+  font-size: 22px;
+  font-weight: 500;
+  color: #ccd6f6;
+  margin-bottom: 10px;
+}
+
+.experience-company {
+  color: #64ffda;
+}
+
+.experience-duration {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 13px;
+  color: #8892b0;
+  margin-bottom: 25px;
+}
+
+.experience-description {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experience-description li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  color: #8892b0;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.description-arrow {
+  position: absolute;
+  left: 0;
+  color: #64ffda;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .experience-content {
+    grid-template-columns: 150px 1fr;
+    gap: 30px;
+  }
+
+  .tab-button {
+    font-size: 12px;
+    padding: 10px 15px;
+  }
+
+  .section-title::after {
+    width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills {
+    padding: 80px 0;
+  }
+
+  .skills-container {
+    padding: 0 20px;
+  }
+
+  .section-title {
+    margin-bottom: 30px;
+  }
+
+  .section-title::after {
+    width: 100px;
+  }
+
+  .experience-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .experience-tabs {
+    flex-direction: row;
+    overflow-x: auto;
+    border-left: none;
+    border-bottom: 2px solid #233554;
+    margin-bottom: 20px;
+  }
+
+  .tab-button {
+    border-left: none;
+    border-bottom: 2px solid transparent;
+    margin-left: 0;
+    margin-bottom: -2px;
+    white-space: nowrap;
+  }
+
+  .tab-button.active {
+    border-left: none;
+    border-bottom-color: #64ffda;
+  }
+
+  .experience-role {
+    font-size: 20px;
+  }
+
+  .experience-description li {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills {
+    padding: 60px 0;
+  }
+
+  .section-title::after {
+    display: none;
+  }
+
+  .tab-button {
+    font-size: 11px;
+    padding: 8px 12px;
+  }
+
+  .experience-role {
+    font-size: 18px;
+  }
+
+  .experience-description li {
+    font-size: 14px;
+    padding-left: 25px;
+  }
+}
