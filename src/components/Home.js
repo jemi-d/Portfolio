@@ -12,7 +12,7 @@ const navItems = [
 ];
 
 
-function Home() {
+function Home({ theme = "dark", onToggleTheme = () => {} }) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -47,16 +47,40 @@ function Home() {
               </li>
             ))}
           </ul>
-          <motion.a
-            href="/resume.pdf"
-            className="resume-button"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Resume
-          </motion.a>
+          <div className="nav-actions">
+            <button
+              type="button"
+              className="theme-toggle"
+              onClick={onToggleTheme}
+              aria-label={`Activate ${theme === "light" ? "dark" : "light"} mode`}
+              aria-pressed={theme === "light"}
+            >
+              <span className="theme-icon" aria-hidden="true">
+                {theme === "light" ? (
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 5.5A6.5 6.5 0 1 0 18.5 12c0-.17 0-.34-.02-.5a5 5 0 0 1-6.98-6z" />
+                  </svg>
+                ) : (
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 4a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0V5a1 1 0 0 1 1-1zm0 12a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1zm8-4a1 1 0 0 1 0 2h-2a1 1 0 1 1 0-2h2zM6 12a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2h2zm9.657-6.657a1 1 0 0 1 1.414 1.414L15.414 8.414a1 1 0 0 1-1.414-1.414l1.657-1.657zM9 15.828a1 1 0 0 1 0 1.414L7.343 18.9a1 1 0 0 1-1.414-1.415l1.657-1.656A1 1 0 0 1 9 15.828zm-.586-9.242L6.758 5.343a1 1 0 0 1 1.414-1.414l1.657 1.657A1 1 0 0 1 8.414 6.586zm8.828 8.828 1.657 1.657a1 1 0 0 1-1.414 1.414l-1.657-1.657a1 1 0 0 1 1.414-1.414zM12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8z" />
+                  </svg>
+                )}
+              </span>
+              <span className="theme-label">
+                {theme === "light" ? "Dark" : "Light"}
+              </span>
+            </button>
+            <motion.a
+              href="/resume.pdf"
+              className="resume-button"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Resume
+            </motion.a>
+          </div>
         </div>
       </nav>
 

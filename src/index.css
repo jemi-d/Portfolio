@@ -1,3 +1,41 @@
+:root {
+  --color-bg: #0a192f;
+  --color-surface: #112240;
+  --color-surface-alt: #1b2a4a;
+  --color-section-divider: #233554;
+  --color-text: #ccd6f6;
+  --color-muted: #8892b0;
+  --color-accent: #64ffda;
+  --color-accent-secondary: #22d3ee;
+  --color-border: rgba(100, 255, 218, 0.2);
+  --color-card-hover: rgba(100, 255, 218, 0.1);
+  --color-navbar: rgba(10, 25, 47, 0.85);
+  --color-navbar-scrolled: rgba(10, 25, 47, 0.95);
+  --color-shadow: rgba(2, 12, 27, 0.7);
+  --section-padding: 80px;
+}
+
+body.theme-light {
+  --color-bg: #f7f9fc;
+  --color-surface: #ffffff;
+  --color-surface-alt: #e4eafa;
+  --color-section-divider: rgba(15, 23, 42, 0.2);
+  --color-text: #102a43;
+  --color-muted: #486581;
+  --color-accent: #2563eb;
+  --color-accent-secondary: #0ea5e9;
+  --color-border: rgba(37, 99, 235, 0.2);
+  --color-card-hover: rgba(37, 99, 235, 0.08);
+  --color-navbar: rgba(255, 255, 255, 0.85);
+  --color-navbar-scrolled: rgba(255, 255, 255, 0.95);
+  --color-shadow: rgba(15, 23, 42, 0.15);
+}
+
+body.theme-dark {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -15,10 +53,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #0a192f;
-  color: #ccd6f6;
+  background-color: var(--color-bg);
+  color: var(--color-text);
   line-height: 1.6;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 code {
